@@ -4,12 +4,12 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
-#include "GameofThrone.h"
+#include "gameofThrone.h"
 
 using namespace std;
 
 int main()
 {
-	cout << Ty.barrel << endl;
+	cout << Highgarden.LandNameOutput() << endl;
 	return 0;
 }

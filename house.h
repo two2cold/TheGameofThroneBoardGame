@@ -4,7 +4,7 @@
 #ifndef HOUSE_H__
 #define HOUSE_H__
 
-const char houseList[7][20] = {{"neutral"},{"Lannister"},{"Baratheon"},{"Greyjoy"},{"Stark"},{"Tyrell"},{"Martell"}};
+extern const char houseList[7][20] = {{"neutral"},{"Lannister"},{"Baratheon"},{"Greyjoy"},{"Stark"},{"Tyrell"},{"Martell"}};
 
 class HouseInfo
 {
