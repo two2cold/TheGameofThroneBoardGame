@@ -5,7 +5,8 @@
 #define GAMEOFTHRONE_H__
 
 #include "soldier.h"
-#include "area.h"
+#include "land.h"
+#include "sea.h"
 #include "house.h"
 #include "adjacentCheck.cpp"
 
