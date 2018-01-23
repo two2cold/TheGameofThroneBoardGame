@@ -11,7 +11,7 @@ public:
 	int footman, knight, siege;
 	int ship;
 	SoldierInfo();
-	SoldierInfo(char houseTemp[20], int footmanTemp, int knightTemp, int siegeTemp, int shipTemp);
+	SoldierInfo(const char houseTemp[20], int footmanTemp, int knightTemp, int siegeTemp, int shipTemp);
 	int AttackSum();
 	int DefenceSum();
 	int Output();
@@ -27,8 +27,8 @@ SoldierInfo::SoldierInfo():house("neutral"), footman(0), knight(0), siege(0), sh
 	attackKnight = 2; defenceKnight = 2;
 	attackSiege = 4; defenceSiege = 0;
 	attackShip = 1; defenceShip = 1;
-};
-SoldierInfo::SoldierInfo(char houseTemp[20], int footmanTemp, int knightTemp, int siegeTemp, int shipTemp)
+}
+SoldierInfo::SoldierInfo(const char houseTemp[20], int footmanTemp, int knightTemp, int siegeTemp, int shipTemp)
 {
 	strcpy(house, houseTemp);
 	footman = footmanTemp;
@@ -39,14 +39,18 @@ SoldierInfo::SoldierInfo(char houseTemp[20], int footmanTemp, int knightTemp, in
 	attackKnight = 2; defenceKnight = 2;
 	attackSiege = 4; defenceSiege = 0;
 	attackShip = 1; defenceShip = 1;
-};
+}
 int SoldierInfo::AttackSum()
 {
 	return footman*attackFootman + knight*attackKnight + siege*attackSiege + ship*attackShip;
-};
+}
 int SoldierInfo::DefenceSum()
 {
 	return footman*defenceFootman + knight*defenceKnight + siege*defenceSiege + ship*defenceShip;
-};
+}
+
+SoldierInfo LandSoldier[38];
+SoldierInfo SeaSoldier[12];
+SoldierInfo PortSoldier[8];
 
 #endif

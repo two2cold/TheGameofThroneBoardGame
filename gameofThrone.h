@@ -4,10 +4,11 @@
 #ifndef GAMEOFTHRONE_H__
 #define GAMEOFTHRONE_H__
 
+#include "house.h"
 #include "soldier.h"
 #include "land.h"
 #include "sea.h"
-#include "house.h"
 #include "adjacentCheck.cpp"
+#include "houseInfoUpdate.cpp"
 
 #endif
