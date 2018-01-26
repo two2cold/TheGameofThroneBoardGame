@@ -10,12 +10,8 @@ using namespace std;
 
 int main()
 {
-	cout << HouseInfoList[1].power << endl;
 	InitializeSea();
-	cout << SeaInfoList[1].SeaNameOutput() << endl;
-	strcpy(LandInfoList[2].ownedHouse, houseList[1]);
-	UpdateCastle();
-	UpdatePower(0);
-	cout << HouseInfoList[1].power << endl;
+	cout << LandInfoList[1].Soldier.house << endl;
+	cout << LandInfoList[2].CloseSeaOutput() << endl;
 	return 0;
 }

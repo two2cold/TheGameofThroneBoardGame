@@ -34,7 +34,15 @@ void UpdatePower(int powerToken)
 		for(int j=0; j<38; j++)
 		{
 			if(!strcmp(LandInfoList[j].ownedHouse, houseList[i]))
-			HouseInfoList[i].power += LandInfoList[j].power;
+			{
+				HouseInfoList[i].power += LandInfoList[j].power;
+				if(LandInfoList[j].HavePortOutput() && LandInfoList[j].PortSoldier.SoldierSum()!=0 &&
+				(!strcmp(SeaInfoList[FindSeaNumber(LandInfoList[j].CloseSeaOutput())].ownedHouse, houseList[i]) ||
+				!strcmp(SeaInfoList[FindSeaNumber(LandInfoList[j].CloseSeaOutput())].ownedHouse, houseList[6])))
+				{
+					HouseInfoList[i].power += 1;
+				}
+			}
 		}
 		HouseInfoList[i].power += powerToken;
 	}

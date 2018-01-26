@@ -6,6 +6,7 @@
 
 #include "house.h"
 #include "soldier.h"
+#include "findNumber.h"
 #include "land.h"
 #include "sea.h"
 #include "adjacentCheck.cpp"

@@ -6,11 +6,6 @@
 #include "stdio.h"
 #include <iostream>
 
-extern const char seaList[12][30] =
-{ { "BayofIce" },{ "SunsetSea" },{ "IronmansBay" },{ "TheGoldenSound" },{ "RedwyneStraights" },
-{ "WestSummerSea" },{ "EastSummerSea" },{ "SeaofDorne" },{ "ShipbreakerBay" },{ "BlackwaterBay" },
-{ "TheNarrowSea" },{ "TheShiveringSea" } };
-
 class SeaInfo: public SoldierInfo
 {
 public:
@@ -21,6 +16,7 @@ public:
 	void RemovePower();
 	char ownedHouse[20];
 	bool havePower;
+	SoldierInfo Soldier;
 private:
 	char seaName[30];
 };
@@ -28,12 +24,12 @@ SeaInfo::SeaInfo(): havePower(false)
 {
 	const char _seaName[30] = "uninitialized";
 	strcpy(seaName, _seaName);
-	strcpy(ownedHouse, houseList[0]);
+	strcpy(ownedHouse, houseList[6]);
 }
 SeaInfo::SeaInfo(const char _seaName[30]): havePower(false)
 {
 	strcpy(seaName, _seaName);
-	strcpy(ownedHouse, houseList[0]);
+	strcpy(ownedHouse, houseList[6]);
 }
 char *SeaInfo::SeaNameOutput()
 {
